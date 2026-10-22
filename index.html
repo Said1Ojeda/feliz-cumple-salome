@@ -15,7 +15,7 @@
   --gold:#c9a24b; --gold-soft:#e7cf8f; --ink:#2b1a1c; --muted:#7a5e60;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden;width:100%}
 body{
   background:var(--wine-deep); color:var(--ink);
   font-family:"Cormorant Garamond",Georgia,serif; font-size:19px; line-height:1.55;
@@ -28,7 +28,7 @@ body.locked{overflow:hidden;height:100svh}
 
 /* ---------- PORTADA ---------- */
 #cover{
-  position:fixed;inset:0;z-index:50;display:grid;place-items:center;
+  position:fixed;inset:0;z-index:50;display:grid;place-items:center;overflow:hidden;
   background:radial-gradient(120% 80% at 50% 20%,#4a0d1b 0%,var(--wine-deep) 70%);
   transition:opacity 1s ease .9s, visibility 0s 1.9s;
 }
@@ -219,7 +219,7 @@ h2{font-weight:500;font-size:38px;line-height:1.1;text-align:center}
 #music.off .bars i{animation:none;height:4px!important}
 @keyframes eq{0%,100%{height:4px}50%{height:16px}}
 
-canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:45}
+canvas#confetti{position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:45}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity 1s ease,transform 1s ease}
 .reveal.in{opacity:1;transform:none}
 footer{background:var(--wine-deep);color:rgba(251,245,236,.5);text-align:center;font-size:14px;padding:26px 0 90px;font-style:italic}
